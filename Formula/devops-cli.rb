@@ -1,15 +1,15 @@
 class DevopsCli < Formula
   desc "devops cli tools"
   homepage "https://github.com/denfren/devops-cli"
-  version "0.1.1"
+  version "0.1.2"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/denfren/devops-cli/releases/download/v0.1.1/devops-cli-aarch64-apple-darwin.tar.xz"
-      sha256 "426dde1e731eb315917fa6d3b95ac3fc1ebdc571173e4df547543433f1d52b5e"
+      url "https://github.com/denfren/devops-cli/releases/download/v0.1.2/devops-cli-aarch64-apple-darwin.tar.xz"
+      sha256 "81030f76437200db52cc758336e83f1e85f186b4d9b1691ccffe0d90e52c92de"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/denfren/devops-cli/releases/download/v0.1.1/devops-cli-x86_64-apple-darwin.tar.xz"
-      sha256 "7494c8e863d092ca0e9734ecabbe4dc8e123a32919916d7828cd660e115c69a9"
+      url "https://github.com/denfren/devops-cli/releases/download/v0.1.2/devops-cli-x86_64-apple-darwin.tar.xz"
+      sha256 "0027dc9dfeab4828697d5dfa59de444ec3983d8ce48fd593e812d4f43d2202ad"
     end
   end
   license "MIT"
