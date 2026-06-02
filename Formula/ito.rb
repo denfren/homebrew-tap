@@ -1,25 +1,25 @@
 class Ito < Formula
   desc "A Rhai script runner with a small standard library for inspecting and generating config files"
   homepage "https://github.com/denfren/ito"
-  version "0.1.1"
+  version "0.1.2"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/denfren/ito/releases/download/v0.1.1/ito-aarch64-apple-darwin.tar.xz"
-      sha256 "58027deb8fe82ef3ebe4c73e12287ee2afdb7748b171698a7f77a1d0b2c5b9d6"
+      url "https://github.com/denfren/ito/releases/download/v0.1.2/ito-aarch64-apple-darwin.tar.xz"
+      sha256 "ec74754bfd14e35d60ea6feb47ff4ed01a90200f6c3b280b8e3022a9c3b7317e"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/denfren/ito/releases/download/v0.1.1/ito-x86_64-apple-darwin.tar.xz"
-      sha256 "96739f31c0a2f1c3a0a092f0bd43f8d89ac2c9936945f2ba392ff08ba3209026"
+      url "https://github.com/denfren/ito/releases/download/v0.1.2/ito-x86_64-apple-darwin.tar.xz"
+      sha256 "88bd0340486624604b5d7dcb1564140d81b9059aa96a4caccea2f072fcaf3f2c"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/denfren/ito/releases/download/v0.1.1/ito-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "cf55c2a812b8ff11a2bf91a8430963bc625e3f966c43655d1e1fbef77d64dadb"
+      url "https://github.com/denfren/ito/releases/download/v0.1.2/ito-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "b4e87ff1ec05b6da06de33a74fdb1535e6e2c62b129ee60672446f16217a1271"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/denfren/ito/releases/download/v0.1.1/ito-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "6c15ac28c7870cddf5c0531878b02acf2e8a5a6362436d5c224ccd19ee981fda"
+      url "https://github.com/denfren/ito/releases/download/v0.1.2/ito-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "6fa30f47ff3918bfe0556df1156bf35afaba089daf39647a69fdfa053880316a"
     end
   end
   license "MIT"
