@@ -1,25 +1,25 @@
 class Ito < Formula
-  desc "A Rhai script runner with a small standard library for inspecting and generating config files"
+  desc "A Lua script runner with a small standard library for inspecting and generating config files"
   homepage "https://github.com/denfren/ito"
-  version "0.5.0"
+  version "0.6.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/denfren/ito/releases/download/v0.5.0/ito-aarch64-apple-darwin.tar.gz"
-      sha256 "08cc9d97755e4f0e2b6f3975f4b25b1e99364bc97088c6c1e868865d241b58d3"
+      url "https://github.com/denfren/ito/releases/download/v0.6.0/ito-aarch64-apple-darwin.tar.gz"
+      sha256 "894e5faff4bf1f3a4358029af7bf7709223e897acd311a1b46c274e7f73fb4b1"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/denfren/ito/releases/download/v0.5.0/ito-x86_64-apple-darwin.tar.gz"
-      sha256 "cba15e76ede574c6b09443348fe22a2834be45c501f44f37cc6831c8b172b374"
+      url "https://github.com/denfren/ito/releases/download/v0.6.0/ito-x86_64-apple-darwin.tar.gz"
+      sha256 "d107a473e3542c783ec815f45798e3ce7f2b3fc5b5ac285ba603260d44e5868b"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/denfren/ito/releases/download/v0.5.0/ito-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "fff639838c987352b90ec461899e8b65b6c7a4945bae81e92145c460ffc55583"
+      url "https://github.com/denfren/ito/releases/download/v0.6.0/ito-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "47f0e4ddd4a4dfef4d05a4c075ad4a65b4b5398317056c9fc9e7b3e6f406a8d0"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/denfren/ito/releases/download/v0.5.0/ito-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "0a2f67d00700d0ea5d2afa52184ce821fcc23b2f62aae9c75b0eae62658ce64c"
+      url "https://github.com/denfren/ito/releases/download/v0.6.0/ito-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "13b1cadc5600486a7d7538dbce218c42fdbc59e2668c408df94815224f1242c4"
     end
   end
   license "MIT"
@@ -47,10 +47,18 @@ class Ito < Formula
   end
 
   def install
-    bin.install "ito" if OS.mac? && Hardware::CPU.arm?
-    bin.install "ito" if OS.mac? && Hardware::CPU.intel?
-    bin.install "ito" if OS.linux? && Hardware::CPU.arm?
-    bin.install "ito" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "ied", "iq", "irun", "ito"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "ied", "iq", "irun", "ito"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "ied", "iq", "irun", "ito"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "ied", "iq", "irun", "ito"
+    end
 
     install_binary_aliases!
 
